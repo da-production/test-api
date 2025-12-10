@@ -8,4 +8,5 @@ use App\Http\Controllers\API\AuthenticationController;
 
 Route::post('/auth/connexion', [AuthenticationController::class,'login']);
 
-Route::get('/test', [ApiController::class, 'get'])->middleware('auth:sanctum');
+Route::get('/doleance', [ApiController::class, 'get'])->middleware('auth:sanctum');
+Route::get('/doleances', [ApiController::class, 'paginate'])->middleware('auth:sanctum');
